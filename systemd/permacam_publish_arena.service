@@ -1,0 +1,13 @@
+[Unit]
+Description=Save images to directory, and update arena.
+After=mosquitto.service coap-gateway-mqtt.service
+
+[Service]
+ExecStart=/home/ubuntu/permacam-conix-demo/permacam_publish_arena.py "-d /etc/www/images/permacam_latest.png" "-u coap-test.permamote.com/images/permacam_latest.png"
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=permacam-conix-demo
+
+[Install]
+WantedBy=multi-user.target
