@@ -21,7 +21,7 @@ if not args.url_path:
 else:
     url_path = args.url_path.strip()
 
-arena.init("arena.andrew.cmu.edu", "realm", "hello")
+arena.init("arena.andrew.cmu.edu", "realm", "permacam")
 arena_image = arena.Object(objType=arena.Shape.cube, location=(0,1.5,0))
 arena_detect = arena.Object(objType=arena.Shape.cube, location=(1.5,1.5,0))
 
