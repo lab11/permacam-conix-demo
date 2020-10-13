@@ -21,9 +21,9 @@ if not args.url_path:
 else:
     url_path = args.url_path.strip()
 
-arena.init("arena.andrew.cmu.edu", "realm", "permacam")
-arena_image = arena.Object(objType=arena.Shape.cube, location=(0,1.5,0))
-arena_detect = arena.Object(objType=arena.Shape.cube, location=(1.5,1.5,0))
+arena.init("arena.andrew.cmu.edu", "realm", "theme2")
+arena_image = arena.Object(objName="permacam_raw_cube", objType=arena.Shape.cube, location=(-20,2,-83), scale=(2,2,2))
+arena_detect = arena.Object(objName="permacam_detect_cube", objType=arena.Shape.cube, location=(-20,2,-85.5), scale=(2,2,2))
 
 def on_connect(client, userdata, flags, rc):
     print("connected with code " + str(rc), flush=True)
